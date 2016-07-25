@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery/jquery-3.0.0.js"></script>
+		<link  href="../css/common.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<form id="myFrom">
+			<input  type="text" id="username"  onchange=""/>
+			<div>asdadasd</div>
+			<select id="sex">
+				<option>男</option>
+				<option>女</option>
+			</select>
+		</form>
+		<br />
+		
+		<button onclick="doTestForm()">click</button>		
+		<script type="application/javascript">
+		
+			function doTestForm(){
+				
+				var form = document.getElementById("myFrom");
+				var elements = form.elements;
+				for(var i=0;i<elements.length;i++){
+					var obj = $(elements[i]);
+					alert(obj.is("select"));
+//					 
+//
+//					 obj.bind("input",function(){
+//					 	   console.info($(this).val());
+//					 	   $(this).next(".del_xy").remove();
+//					 });
+//					 
+//					 var span = "<span class='del_xy'>请输入正确的值</span>"
+//				     $(span).insertAfter(obj);
+				}
+			}
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

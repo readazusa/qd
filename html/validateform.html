@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery/jquery-3.0.0.js" type="application/javascript"></script>
+		<script src="../js/smc/xy_validate_form.js" type="application/javascript"></script>
+		<script src="../js/smc/common.js" type="application/javascript"></script>
+		<link rel="stylesheet" href="../css/common.css" /> 
+		
+	</head>
+	<body>
+		<form id="validateForm"> 
+			<input  type="text" valid="required|email" msg="请输入值|请输入正确的邮件"/>
+			<select valid="required" msg="请输入必填值">
+				<option value="">请选择</option>
+				<option value="1">hello</option>
+				<option value="2">world</option>
+			</select>
+			<input type="checkbox" name="h" id="one" value="t"/><label for="one">唐</label>
+			<input type="checkbox" name="h" id="two" value="s"/><label for="two">sun</label>
+		</form>
+		<br />	
+		
+		<button onclick="doSubmit()">提交</button>
+		
+		<script type="application/javascript">
+			
+			function doSubmit(){
+				if($.xyValidateForm(document.getElementById("validateForm"))){
+					alert("验证通过");
+				}else{
+					$.show();
+				}
+			}
+			
+			
+		</script>
+		
+	</body>
+</html>
